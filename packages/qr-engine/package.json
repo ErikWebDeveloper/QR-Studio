@@ -1,0 +1,21 @@
+{
+  "name": "@qr-studio/qr-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./svg": "./src/svg.ts",
+    "./validation": "./src/validation.ts",
+    "./batch": "./src/batch.ts"
+  },
+  "dependencies": {
+    "@qr-studio/shared": "*",
+    "archiver": "^7.0.1",
+    "qrcode-generator": "^1.4.4",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.1"
+  }
+}

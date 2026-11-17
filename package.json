@@ -1,0 +1,49 @@
+{
+  "name": "qr-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted QR code generator with a visual editor and REST API",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@qr-studio/api & npm run dev --workspace=@qr-studio/web",
+    "dev:api": "npm run dev --workspace=@qr-studio/api",
+    "dev:web": "npm run dev --workspace=@qr-studio/web",
+    "build": "npm run build --workspace=@qr-studio/web",
+    "start": "npm run start --workspace=@qr-studio/api",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "npm run typecheck"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/supertest": "^6.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@zxing/library": "^0.21.3",
+    "autoprefixer": "^10.4.20",
+    "fflate": "^0.8.2",
+    "jsqr": "^1.4.0",
+    "postcss": "^8.4.49",
+    "supertest": "^7.0.0",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^3.0.4"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  }
+}
